@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import DUMMY_PRODUCTS from "./components/Data/Data"
 import ProductList from './components/Product/ProductList'
 import ProductAdd from './components/ProductAdd/ProductAdd';
-//import Deneme from './components/ProductAdd/Deneme';
+import DUMMY_PRODUCTS from './components/Data/Data';
 
 
 const App = () => {

@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import DUMMY_PRODUCTS from "../Data/Data";
+
 
 const ProductAdd = () => {
   const [data, setData] = useState([]);
 
+
   const [form, setForm] = useState({
+    id:Math.random().toString(),
     title: "",
     description: "",
     price: "",
@@ -20,9 +24,11 @@ const ProductAdd = () => {
       alert("Tum alanlari doldurunuz");
       return;
     }
+
     data.push({
       ...form,
     });
+
     localStorage.setItem("data", JSON.stringify(data));
     setForm({
       title: "",

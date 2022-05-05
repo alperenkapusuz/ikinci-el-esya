@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductItem = (props) => {
   return (
@@ -7,6 +8,9 @@ const ProductItem = (props) => {
         <p>{props.description}</p>
         <p>{props.price}</p>
         <p>{props.place}</p>
+        <button>
+          {/* //<Link to={}>Detay</Link> */}
+        </button>
     </div>
   )
 }
