@@ -21,6 +21,9 @@ const Navi = () => {
             <NavItem>
               <NavLink href="/ads/">ads</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/addItem/">addItem</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

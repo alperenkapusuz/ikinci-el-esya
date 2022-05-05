@@ -3,12 +3,10 @@ import React from 'react'
 const ProductItem = (props) => {
   return (
     <div>
-        <ul>
-            <li>{props.title}</li>
-            <li>{props.description}</li>
-            <li>{props.price}</li>
-            <li>{props.place}</li>
-        </ul>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
+        <p>{props.price}</p>
+        <p>{props.place}</p>
     </div>
   )
 }
