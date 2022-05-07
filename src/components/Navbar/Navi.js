@@ -15,9 +15,9 @@ const Navi = () => {
         <NavbarBrand href="/">ikinciel</NavbarBrand>
         <Collapse navbar>
           <Nav className="me-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="/about/">about</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink href="/ads/">ads</NavLink>
             </NavItem>

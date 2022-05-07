@@ -21,22 +21,13 @@ const ProductList = (props) => {
           )
           .map((product) => (
             <ProductItem
-              key={product.id}
+              id={product.id}
               title={product.title}
               description={product.description}
               price={product.price}
               place={product.place}
             />
           ))}
-        {/* {props.items.map((product) => (
-          <ProductItem
-            key={product.id}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            place={product.place}
-          />
-        ))} */}
       </div>
     </div>
   );

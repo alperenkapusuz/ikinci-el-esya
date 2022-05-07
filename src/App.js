@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductList from './components/Product/ProductList'
 import ProductAdd from './components/ProductAdd/ProductAdd';
 import Error from './components/Error/Error';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 //import DUMMY_PRODUCTS from './components/Data/Data';
 
 
@@ -20,6 +21,7 @@ const App = () => {
     const localData = localStorage.getItem("data") ?? [];
     setProducts(JSON.parse(localData));
   };
+  
 
   return (
     <BrowserRouter>
@@ -27,6 +29,7 @@ const App = () => {
       <Routes>
         <Route path="/addItem" element={<ProductAdd/>} />
         <Route path="/ads" element={<ProductList items={products}/>} />
+        <Route path="/ads/:p_id" element={<ProductDetail items={products}/>} />
         <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
