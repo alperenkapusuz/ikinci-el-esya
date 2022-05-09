@@ -23,7 +23,7 @@ const ProductAdd = () => {
       return;
     }
 
-    data.push({
+    data.push( {
       ...form,
     });
 
@@ -105,33 +105,6 @@ const ProductAdd = () => {
         </Button>
       </Form>
     </Card>
-    // <div>
-    //   <div>
-    //     <input
-    //       onChange={(event) => setForm({ ...form, title: event.target.value })}
-    //       value={form.title}
-    //       placeholder="title"
-    //     />
-    //     <input
-    //       onChange={(event) =>
-    //         setForm({ ...form, description: event.target.value })
-    //       }
-    //       value={form.description}
-    //       placeholder="description"
-    //     />
-    //     <input
-    //       onChange={(event) => setForm({ ...form, price: event.target.value })}
-    //       value={form.price}
-    //       placeholder="price"
-    //     />
-    //     <input
-    //       onChange={(event) => setForm({ ...form, place: event.target.value })}
-    //       value={form.place}
-    //       placeholder="place"
-    //     />
-    //     <button onClick={saveItem}>EKLE</button>
-    //   </div>
-    // </div>
   );
 };
 

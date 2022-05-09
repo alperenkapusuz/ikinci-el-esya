@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navi from './components/Navbar/Navi'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import DUMMY_PRODUCTS from "./components/Data/Data"
 import ProductList from './components/Product/ProductList'
 import ProductAdd from './components/ProductAdd/ProductAdd';
 import Error from './components/Error/Error';
 import ProductDetail from './components/ProductDetail/ProductDetail';
-//import DUMMY_PRODUCTS from './components/Data/Data';
+import DUMMY_PRODUCTS from './components/Data/Data';
 
 
 const App = () => {
@@ -14,6 +13,7 @@ const App = () => {
   const [products, setProducts] = useState([]) 
 
   useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(DUMMY_PRODUCTS));
     getItem();
   }, []);
 
