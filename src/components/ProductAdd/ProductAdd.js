@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form, FormGroup, Label, Input, Card } from "reactstrap";
+import DUMMY_PRODUCTS from "../Data/Data";
 
 const ProductAdd = () => {
   const [data, setData] = useState([]);
@@ -23,11 +24,13 @@ const ProductAdd = () => {
       return;
     }
 
-    data.push( {
+    data.push( 
+      {
       ...form,
     });
 
     localStorage.setItem("data", JSON.stringify(data));
+
     setForm({
       title: "",
       description: "",
@@ -42,7 +45,12 @@ const ProductAdd = () => {
 
   const getItem = () => {
     const localData = localStorage.getItem("data") ?? [];
-    setData(JSON.parse(localData));
+    if(localData.length===0){
+      localData.push(...DUMMY_PRODUCTS)
+      setData(localData);
+    }else{
+      setData(JSON.parse(localData));
+    }    
   };
 
   return (

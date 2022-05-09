@@ -11,17 +11,20 @@ import DUMMY_PRODUCTS from './components/Data/Data';
 const App = () => {
 
   const [products, setProducts] = useState([]) 
-
+  
   useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(DUMMY_PRODUCTS));
     getItem();
   }, []);
 
   const getItem = () => {
     const localData = localStorage.getItem("data") ?? [];
-    setProducts(JSON.parse(localData));
+    if(localData.length===0){
+      localData.push(...DUMMY_PRODUCTS)
+      setProducts(localData);
+    }else{
+      setProducts(JSON.parse(localData));
+    } 
   };
-  
 
   return (
     <BrowserRouter>
