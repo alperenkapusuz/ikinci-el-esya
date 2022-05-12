@@ -19,6 +19,9 @@ const ProductItem = (props) => {
             {props.title}
           </CardTitle>
           <CardText>
+            {props.category}
+          </CardText>
+          <CardText>
             {props.description}
           </CardText>
           <CardSubtitle className="mb-2 text-muted" tag="h6">

@@ -8,6 +8,7 @@ const ProductAdd = () => {
   const [form, setForm] = useState({
     id: Math.random().toString(),
     title: "",
+    category: "",
     description: "",
     price: "",
     place: "",
@@ -16,6 +17,7 @@ const ProductAdd = () => {
   const saveItem = () => {
     if (
       form.title === "" ||
+      form.category === "" ||
       form.description === "" ||
       form.price === "" ||
       form.place === ""
@@ -33,6 +35,7 @@ const ProductAdd = () => {
 
     setForm({
       title: "",
+      category: "",
       description: "",
       price: "",
       place: "",
@@ -67,6 +70,19 @@ const ProductAdd = () => {
               setForm({ ...form, title: event.target.value })
             }
             value={form.title}
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label>Category</Label>
+          <Input
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Enter title"
+            onChange={(event) =>
+              setForm({ ...form, category: event.target.value })
+            }
+            value={form.category}
           />
         </FormGroup>
         <FormGroup>
