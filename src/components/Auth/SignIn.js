@@ -10,7 +10,7 @@ function SignIn() {
   }  
   return (
     <div>
-        <Button onClick={signInWithGoogle}>Google ile giriş yap</Button>
+        <Button style={{width:'170px',height:'50px'}} onClick={signInWithGoogle}>Google ile giriş yap</Button>
     </div>
   )
 }
