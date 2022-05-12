@@ -7,8 +7,13 @@ import {
   NavLink,
   Nav,
 } from "reactstrap";
+import SignIn from "../Auth/SignIn";
+import { auth } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import SignOut from "../Auth/SignOut";
 
 const Navi = () => {
+  const [user] = useAuthState(auth);
   return (
     <div>
       <Navbar color="light" expand="md" light>
@@ -21,9 +26,33 @@ const Navi = () => {
             <NavItem>
               <NavLink href="/ads/">ads</NavLink>
             </NavItem>
-            <NavItem>
+            {user ? (
+              <>
+                <NavItem>
+                  <NavLink href="/addItem/">addItem</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#">
+                    <SignOut />
+                  </NavLink>
+                </NavItem>
+              </>
+            ) : (
+              <NavItem>
+                <NavLink href="#">
+                  <SignIn />
+                </NavLink>
+              </NavItem>
+            )}
+
+            {/* <NavItem>
               <NavLink href="/addItem/">addItem</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="#">
+                <SignIn />
+              </NavLink>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Navbar>

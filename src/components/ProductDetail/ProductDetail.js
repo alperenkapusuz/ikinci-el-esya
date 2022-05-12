@@ -14,14 +14,9 @@ const ProductDetail = (props) => {
           }
         }
     }, []);
-
-    // console.log(props.items.length)
     console.log(productDetail)
+    console.log(productDetail.title)
   
-    // const getItem = () => {
-    //   const localData = localStorage.getItem("data") ?? [];
-    //   setProducts(JSON.parse(localData));
-    // };
 
   return (
     <div className="container-fluid">
@@ -32,7 +27,6 @@ const ProductDetail = (props) => {
               <h3 className="card-title">{productDetail.title}</h3>
               <h4 className="card-title">{productDetail.price}</h4>
               <p className="card-text">
-                {" "}
                 <strong>{productDetail.description}</strong>
                 <strong> {productDetail.place}</strong> 
               </p>

@@ -28,7 +28,7 @@ const ProductItem = (props) => {
             {props.place} 
           </CardSubtitle>
           <Button>
-            <Link to={`/ads/${props.id}`}>Detay</Link>
+            <Link to={`/chat`}>Mesaj Gönder</Link>
           </Button>
         </CardBody>
       </Card>
