@@ -6,7 +6,7 @@ import './SendMessage.css'
 
 function SendMessage({ scroll }) {
     const [msg, setMsg] = useState('')
-
+  
     async function sendMessage(e){
         e.preventDefault()
         const {uid, photoURL} = auth.currentUser

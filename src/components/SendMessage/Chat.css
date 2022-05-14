@@ -100,3 +100,10 @@ img {
     width: 300px;
     margin-top: 20px;
 }
+
+.page{
+  margin: auto;
+  width: 1243px;
+  height: 1000px;
+  /* background-color: red; */
+}

@@ -8,6 +8,7 @@ function Chat() {
   const [user] = useAuthState(auth);
   const scroll = useRef();
   const [messages, setMessages] = useState([]);
+
   useEffect(() => {
     db.collection("messages")
       .orderBy("createdAt")
@@ -16,25 +17,28 @@ function Chat() {
         setMessages(snapshot.docs.map((doc) => doc.data()));
       });
   }, []);
+
   return (
     <div>
       {user ? (
-        <div className="msgs">
-          {messages.map(({ id, text, photoURL, uid }) => (
-            <div>
-              <div
-                key={id}
-                className={`msg ${
-                  uid === auth.currentUser.uid ? "sent" : "received"
-                }`}
-              >
-                <img src={photoURL} alt="" />
-                <p>{text}</p>
+        <div className="page">
+          <div className="msgs">
+            {messages.map(({ id, text, photoURL, uid }) => (
+              <div>
+                <div
+                  key={id}
+                  className={`msg ${
+                    uid === auth.currentUser.uid ? "sent" : "received"
+                  }`}
+                >
+                  <img src={photoURL} alt="" />
+                  <p>{text}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+            <span ref={scroll}></span>
+          </div>
           <SendMessage scroll={scroll} />
-          <div ref={scroll}></div>
         </div>
       ) : (
         <div className="Chat__signIn">

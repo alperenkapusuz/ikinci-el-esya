@@ -12,6 +12,7 @@ const ProductAdd = () => {
     id: Math.random().toString(),
     title: "",
     category: "",
+    imageURL: "",
     description: "",
     price: "",
     place: "",
@@ -21,6 +22,7 @@ const ProductAdd = () => {
     if (
       form.title === "" ||
       form.category === "" ||
+      form.imageURL === "" ||
       form.description === "" ||
       form.price === "" ||
       form.place === ""
@@ -38,6 +40,7 @@ const ProductAdd = () => {
     setForm({
       title: "",
       category: "",
+      imageURL: "",
       description: "",
       price: "",
       place: "",
@@ -87,6 +90,19 @@ const ProductAdd = () => {
                   setForm({ ...form, category: event.target.value })
                 }
                 value={form.category}
+              />
+            </FormGroup>
+            <FormGroup className="ProductAdd__image">
+              <Label>Image</Label>
+              <Input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Enter image URL"
+                onChange={(event) =>
+                  setForm({ ...form, imageURL: event.target.value })
+                }
+                value={form.imageURL}
               />
             </FormGroup>
             <FormGroup className="ProductAdd__description">

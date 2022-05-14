@@ -3,6 +3,7 @@ const DUMMY_PRODUCTS = [
         id:"e1",
         title:"Telefon",
         category:"a1",
+        imageURL: "https://i.pinimg.com/550x/34/15/10/341510cc68c17e87cee8310da52fd7b2.jpg",
         description:"Aciklama",
         price:"0.001",
         place:"asdasd"
@@ -11,6 +12,7 @@ const DUMMY_PRODUCTS = [
         id:"e2",
         title:"Telefon1",
         category:"a1",
+        imageURL: "https://i.pinimg.com/550x/34/15/10/341510cc68c17e87cee8310da52fd7b2.jpg",
         description:"Aciklama",
         price:"0.002",
         place:"asdasd1"
@@ -19,6 +21,7 @@ const DUMMY_PRODUCTS = [
         id:"e3",
         title:"Telefon2",
         category:"a2",
+        imageURL: "https://i.pinimg.com/550x/34/15/10/341510cc68c17e87cee8310da52fd7b2.jpg",
         description:"Aciklama2",
         price:"0.3",
         place:"asdasd2"
@@ -27,6 +30,7 @@ const DUMMY_PRODUCTS = [
         id:"e4",
         title:"Telefon3",
         category:"a2",
+        imageURL: "https://i.pinimg.com/550x/34/15/10/341510cc68c17e87cee8310da52fd7b2.jpg",
         description:"Aciklama3",
         price:"0.004",
         place:"asdasd3"
