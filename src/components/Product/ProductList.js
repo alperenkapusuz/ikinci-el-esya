@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductItem from "./ProductItem";
 import Search from "../Search/Search";
+import './ProductList.css'
 
 const ProductList = (props) => {
   const [searchTitle, setSearchTitle] = useState("");
@@ -11,8 +12,8 @@ const ProductList = (props) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="productList__page">
+      <div className="productList__search">
         <Search searchCategory={searchCategory} setSearchCategory={setSearchCategory} searchTitle={searchTitle} setSearchTitle={setSearchTitle} />
       </div>
       <div>

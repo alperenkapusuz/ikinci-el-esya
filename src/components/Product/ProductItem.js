@@ -8,12 +8,14 @@ import {
   CardSubtitle,
   CardText,
 } from "reactstrap";
+import './ProductItem.css'
+
 
 
 const ProductItem = (props) => {
   return (
     <div>
-      <Card body color="primary" outline>
+      <Card className="ProductItem__card" body color="primary" outline>
         <CardBody>
           <CardTitle tag="h5">
             {props.title}

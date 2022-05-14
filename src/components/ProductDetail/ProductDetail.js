@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useParams, Link } from "react-router-dom";
-
+import './ProductDetail.css'
 
 const ProductDetail = (props) => {
     const { p_id } = useParams();
@@ -19,7 +19,7 @@ const ProductDetail = (props) => {
   
 
   return (
-    <div className="container-fluid">
+    <div className="ProductDetail_page">
       <div className="card">
         <div className="row">
           <div className="col-md-6">

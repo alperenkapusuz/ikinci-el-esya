@@ -4,7 +4,7 @@ import firebase from 'firebase/compat/app';
 import { Input, Button } from 'reactstrap';
 import './SendMessage.css'
 
-function SendMessage() {
+function SendMessage({ scroll }) {
     const [msg, setMsg] = useState('')
 
     async function sendMessage(e){
@@ -18,6 +18,7 @@ function SendMessage() {
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         })
         setMsg('')
+        scroll.current.scrollIntoView({ behavior: 'smooth' })
     }
   return (
     <div>

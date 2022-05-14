@@ -55,7 +55,8 @@ img {
   }
   
   .msgs {
-    margin: 110px 0;
+    margin: auto;
+    width: 1243px;
     display: flex;
     flex-direction: column;
   }
@@ -92,3 +93,10 @@ img {
       margin-top: -7px;
     }
   }
+
+  .Chat__signIn p{
+    margin: auto;
+    /* background-color: red; */
+    width: 300px;
+    margin-top: 20px;
+}

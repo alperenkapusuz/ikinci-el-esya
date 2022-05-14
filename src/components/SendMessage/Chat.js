@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { auth, db } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import SendMessage from "./SendMessage";
-import './Chat.css'
+import "./Chat.css";
 
 function Chat() {
   const [user] = useAuthState(auth);
+  const scroll = useRef();
   const [messages, setMessages] = useState([]);
   useEffect(() => {
     db.collection("messages")
@@ -16,7 +17,7 @@ function Chat() {
       });
   }, []);
   return (
-    <div >
+    <div>
       {user ? (
         <div className="msgs">
           {messages.map(({ id, text, photoURL, uid }) => (
@@ -32,10 +33,13 @@ function Chat() {
               </div>
             </div>
           ))}
-          <SendMessage/>
+          <SendMessage scroll={scroll} />
+          <div ref={scroll}></div>
         </div>
       ) : (
-        <div>Giris yap</div>
+        <div className="Chat__signIn">
+          <p>Lütfen Giriş yapınız</p>
+        </div>
       )}
     </div>
   );

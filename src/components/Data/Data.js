@@ -10,8 +10,8 @@ const DUMMY_PRODUCTS = [
     {
         id:"e2",
         title:"Telefon1",
-        category:"a2",
-        description:"Aciklama1",
+        category:"a1",
+        description:"Aciklama",
         price:"0.002",
         place:"asdasd1"
     },

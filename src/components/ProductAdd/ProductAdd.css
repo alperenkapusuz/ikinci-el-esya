@@ -1,0 +1,119 @@
+.ProductAdd__page{
+    width: 1243px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.ProductAdd__title{
+    display: flex;
+    /* background-color: red; */
+}
+
+.ProductAdd__title Label{
+    /* background-color: blue; */
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.ProductAdd__title Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ProductAdd__category{
+    display: flex;
+}
+
+.ProductAdd__category Label{
+    /* background-color: blue; */
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.ProductAdd__category Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ProductAdd__description{
+    display: flex;
+}
+
+.ProductAdd__description Label{
+    /* background-color: blue; */
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.ProductAdd__description Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ProductAdd__price{
+    display: flex;
+}
+
+.ProductAdd__price Label{
+    /* background-color: blue; */
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.ProductAdd__price Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ProductAdd__place{
+    display: flex;
+}
+
+.ProductAdd__place Label{
+    /* background-color: blue; */
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.ProductAdd__place Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.ProductAdd__button{
+    margin-left: 425px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.ProductAdd__signIn p{
+    margin: auto;
+    /* background-color: red; */
+    width: 300px;
+    margin-top: 20px;
+}

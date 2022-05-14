@@ -13,7 +13,7 @@ import "./Navi.css";
 
 const Navi = () => {
   return (
-    <div>
+    <div className="Navbar__page">
       <Navbar color="light" expand="md" light>
         <NavbarBrand href="/">ikinciel</NavbarBrand>
         <Collapse navbar>

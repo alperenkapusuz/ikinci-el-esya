@@ -1,0 +1,18 @@
+.Search__page{
+    display: flex;
+    /* background-color: red; */
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.Search__category_div{
+    /* background-color: green; */
+    margin-left: 150px;
+    margin-right: 5px;
+}
+
+.Search__title_div{
+    /* background-color: yellow; */
+    width: 400px;
+}

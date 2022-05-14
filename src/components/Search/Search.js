@@ -1,29 +1,36 @@
-import React from 'react'
+import React from "react";
+import "./Search.css";
 
-const Search = ({searchCategory, setSearchCategory ,searchTitle, setSearchTitle }) => {
-    return (
-        <div className="d-flex">
-            <div>
-            <input
-                name='search'
-                value={searchCategory}
-                className="form-control me-sm-2"
-                type="text" placeholder="Ara"
-                onChange={(e) => setSearchCategory(e.target.value)}
-            />
-            </div>
-            <div>
-            <input
-                name='search'
-                value={searchTitle}
-                className="form-control me-sm-2"
-                type="text" placeholder="Ara"
-                onChange={(e) => setSearchTitle(e.target.value)}
-            />
-            </div>
-            <button className="btn btn-dark sm-0 mx-2" type="submit">Ara</button>
-        </div>
-    )
-}
+const Search = ({
+  searchCategory,
+  setSearchCategory,
+  searchTitle,
+  setSearchTitle,
+}) => {
+  return (
+    <div className="Search__page">
+      <div className="Search__category_div">
+        <input
+          name="search"
+          value={searchCategory}
+          className="form-control me-sm-2"
+          type="text"
+          placeholder="Category"
+          onChange={(e) => setSearchCategory(e.target.value)}
+        />
+      </div>
+      <div className="Search__title_div">
+        <input
+          name="search"
+          value={searchTitle}
+          className="form-control me-sm-2"
+          type="text"
+          placeholder="Title"
+          onChange={(e) => setSearchTitle(e.target.value)}
+        />
+      </div>
+    </div>
+  );
+};
 
-export default Search
+export default Search;
