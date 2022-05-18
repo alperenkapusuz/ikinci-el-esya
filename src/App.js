@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductList from './components/Product/ProductList'
 import ProductAdd from './components/ProductAdd/ProductAdd';
 import Error from './components/Error/Error';
-//import ProductDetail from './components/ProductDetail/ProductDetail';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 import DUMMY_PRODUCTS from './components/Data/Data';
 import Chat from './components/SendMessage/Chat';
 
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/addItem" element={<ProductAdd/>} />
         <Route path="/" element={<ProductList items={products}/>} />
         <Route path="/chat" element={<Chat/>} />
-        {/* <Route path="/ads/:p_id" element={<ProductDetail items={products}/>} /> */}
+        <Route path="/:p_id" element={<ProductDetail items={products}/>} /> 
         <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>

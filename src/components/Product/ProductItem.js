@@ -15,36 +15,48 @@ const ProductItem = (props) => {
   const [readMore, setReadMore] = useState(false);
   return (
     <div>
-      <Card className="ProductItem__card" body color="primary" outline>
-        <CardBody>
+      <Card className="ProductItem__card" color="secondary" body outline>
+        <CardBody className="ProductItem__cardBody">
           <CardImg
             className="ProductItem__image"
             height="200%"
             src={props.imageURL}
             alt="Card image cap"
           />
-          <CardTitle tag="h5">{props.title}</CardTitle>
-          <CardSubtitle>{props.category}</CardSubtitle>
-          <CardSubtitle>
-            {readMore
-              ? props.description
-              : `${props.description.substring(0, 10)}...`}
-            <button
-              style={{ border: "none" }}
-              className="btn btn-outline-success btn-sm"
-              onClick={() => setReadMore(!readMore)}
-            >
-              {readMore ? "Daha az göster" : "Daha fazla oku"}
-            </button>
-          </CardSubtitle>
-          <CardText className="mb-2 text-muted" tag="h6">
-            {props.price}
-          </CardText>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-            {props.place}
-          </CardSubtitle>
-          <Button>
-            <Link to={`/chat`}>Mesaj Gönder</Link>
+
+          <div className="ProductItem__div1">
+            <CardTitle tag="h5">{props.title}</CardTitle>
+            <hr />
+            <CardSubtitle tag="h6">
+              {readMore
+                ? props.description
+                : `${props.description.substring(0, 20)}...`}
+              <button
+                style={{ border: "none" }}
+                className="btn btn-sm"
+                onClick={() => setReadMore(!readMore)}
+              >
+                {readMore ? "Daha az göster" : "Daha fazla oku"}
+              </button>
+            </CardSubtitle>
+          </div>
+          <div className="ProductItem__div2">
+            <CardText className="mb-2 text-muted" tag="h4">
+              {props.price} TL
+            </CardText>
+            <CardText className="mb-2 text-muted" tag="h4">
+              {props.place}
+            </CardText>
+          </div>
+          {/* <Button color="secondary">
+            <Link className="ProductItem__button" to={`/chat`}>
+              Mesaj Gönder
+            </Link>
+          </Button> */}
+          <Button color="secondary">
+            <Link className="ProductItem__button" to={`/${props.id}`}>
+              Detay
+            </Link>
           </Button>
         </CardBody>
       </Card>

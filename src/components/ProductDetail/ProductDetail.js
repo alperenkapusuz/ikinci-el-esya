@@ -5,7 +5,7 @@ import './ProductDetail.css'
 const ProductDetail = (props) => {
     const { p_id } = useParams();
     const [productDetail, setProductDetail] = useState("");
-    const apiUrl =`http://localhost:3000/ads/${p_id}`;
+    const apiUrl =`http://localhost:3000/${p_id}`;
 
     useEffect(() => {
         for(let i = 0; i<props.items.length; i++){
@@ -31,7 +31,7 @@ const ProductDetail = (props) => {
                 <strong> {productDetail.place}</strong> 
               </p>
               <p className="card-text">{productDetail.description}</p>
-              <Link to="/ads" className="btn btn-sm btn-outline-success mt-5 ">
+              <Link to="/" className="btn btn-sm btn-outline-success mt-5 ">
                 Anasayfaya git
               </Link>
             </div>
