@@ -32,7 +32,7 @@ const App = () => {
       <Navi/>
       <Routes>
         <Route path="/addItem" element={<ProductAdd/>} />
-        <Route path="/ads" element={<ProductList items={products}/>} />
+        <Route path="/" element={<ProductList items={products}/>} />
         <Route path="/chat" element={<Chat/>} />
         {/* <Route path="/ads/:p_id" element={<ProductDetail items={products}/>} /> */}
         <Route path="*" element={<Error/>} />

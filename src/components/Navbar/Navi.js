@@ -19,9 +19,6 @@ const Navi = () => {
         <Collapse navbar>
           <Nav className="me-auto" navbar>
             <div className="Navbar__ads_add">
-              <NavItem className="Navbar__ads">
-                <NavLink href="/ads/">Ürünler</NavLink>
-              </NavItem>
               <NavItem className="Navbar__addItems">
                 <NavLink href="/addItem/">Ürün Ekle</NavLink>
               </NavItem>
