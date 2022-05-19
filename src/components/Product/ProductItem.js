@@ -15,7 +15,7 @@ const ProductItem = (props) => {
   const [readMore, setReadMore] = useState(false);
   return (
     <div>
-      <Card className="ProductItem__card" color="secondary" body outline>
+      <Card className="ProductItem__card" color="success" body outline>
         <CardBody className="ProductItem__cardBody">
           <CardImg
             className="ProductItem__image"
@@ -26,8 +26,7 @@ const ProductItem = (props) => {
 
           <div className="ProductItem__div1">
             <CardTitle tag="h5">{props.title}</CardTitle>
-            <hr />
-            <CardSubtitle tag="h6">
+            {/* <CardSubtitle tag="h6">
               {readMore
                 ? props.description
                 : `${props.description.substring(0, 20)}...`}
@@ -38,7 +37,7 @@ const ProductItem = (props) => {
               >
                 {readMore ? "Daha az göster" : "Daha fazla oku"}
               </button>
-            </CardSubtitle>
+            </CardSubtitle> */}
           </div>
           <div className="ProductItem__div2">
             <CardText className="mb-2 text-muted" tag="h4">
@@ -53,7 +52,7 @@ const ProductItem = (props) => {
               Mesaj Gönder
             </Link>
           </Button> */}
-          <Button color="secondary">
+          <Button color="success">
             <Link className="ProductItem__button" to={`/${props.id}`}>
               Detay
             </Link>

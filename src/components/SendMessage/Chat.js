@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { auth, db } from "../../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import SendMessage from "./SendMessage";
 import "./Chat.css";
 
 function Chat() {
-  const [user] = useAuthState(auth);
   const scroll = useRef();
   const [messages, setMessages] = useState([]);
 
@@ -32,6 +30,7 @@ function Chat() {
               >
                 <img src={photoURL} alt="" />
                 <p>{text}</p>
+                <p>{uid}</p>
               </div>
             </div>
           ))}
