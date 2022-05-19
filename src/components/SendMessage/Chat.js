@@ -20,7 +20,32 @@ function Chat() {
 
   return (
     <div>
-      {user ? (
+      <div className="page">
+        <div className="msgs">
+          {messages.map(({ id, text, photoURL, uid }) => (
+            <div>
+              <div
+                key={id}
+                className={`msg ${
+                  uid === auth.currentUser.uid ? "sent" : "received"
+                }`}
+              >
+                <img src={photoURL} alt="" />
+                <p>{text}</p>
+              </div>
+            </div>
+          ))}
+          <span ref={scroll}></span>
+        </div>
+        <SendMessage scroll={scroll} />
+      </div>
+    </div>
+  );
+}
+
+export default Chat;
+
+/* 
         <div className="page">
           <div className="msgs">
             {messages.map(({ id, text, photoURL, uid }) => (
@@ -40,13 +65,4 @@ function Chat() {
           </div>
           <SendMessage scroll={scroll} />
         </div>
-      ) : (
-        <div className="Chat__signIn">
-          <p>Lütfen Giriş yapınız</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default Chat;
+   */
