@@ -146,7 +146,7 @@ const ProductAdd = () => {
             </FormGroup>
             <Button
               className="ProductAdd__button"
-              color="primary"
+              color="success"
               onClick={saveItem}
             >
               EKLE

@@ -16,6 +16,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__title Input{
@@ -36,6 +37,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__category Input{
@@ -56,6 +58,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__description Input{
@@ -76,6 +79,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__price Input{
@@ -96,6 +100,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__place Input{
@@ -116,6 +121,7 @@
     margin-top: 10px;
     font-size: 20px;
     padding-left: 15px;
+    color: #298f24
 }
 
 .ProductAdd__image Input{
