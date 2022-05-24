@@ -2,7 +2,7 @@ img {
     border-radius: 50%;
     height: 45px;
     margin-top: -20px;
-    border: 2px solid black;
+    border: 0px;
   }
   
   p {
@@ -94,16 +94,14 @@ img {
     }
   }
 
-  .Chat__signIn p{
+/* .Chat__signIn p{
     margin: auto;
-    /* background-color: red; */
     width: 300px;
     margin-top: 20px;
-}
+} */
 
 .page{
   margin: auto;
   width: 1243px;
   height: 1000px;
-  /* background-color: red; */
 }

@@ -26,18 +26,6 @@ const ProductItem = (props) => {
 
           <div className="ProductItem__div1">
             <CardTitle tag="h5">{props.title}</CardTitle>
-            {/* <CardSubtitle tag="h6">
-              {readMore
-                ? props.description
-                : `${props.description.substring(0, 20)}...`}
-              <button
-                style={{ border: "none" }}
-                className="btn btn-sm"
-                onClick={() => setReadMore(!readMore)}
-              >
-                {readMore ? "Daha az göster" : "Daha fazla oku"}
-              </button>
-            </CardSubtitle> */}
           </div>
           <div className="ProductItem__div2">
             <CardText className="mb-2 text-muted" tag="h4">

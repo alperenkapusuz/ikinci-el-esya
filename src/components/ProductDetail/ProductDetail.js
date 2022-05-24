@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Button } from "reactstrap";
 import "./ProductDetail.css";
 import Chat from "../SendMessage/Chat";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -41,12 +42,17 @@ const ProductDetail = (props) => {
               <div className="ProductDetail__price">
                 <p>Price: ₺{productDetail.price} </p>
               </div>
+              <Button className="ProductDetail__button"  color="success">
+                <Link className="ProductDetail__link" to="/chat">Mesaj Gönder</Link>
+              </Button>
+              <Button className="ProductDetail__button"  color="secondary">
+                <Link className="ProductDetail__link" to="/">Anasayfaya dön</Link>
+              </Button>
             </div>
           </div>
           <div className="ProductDetail__description">
             <p>{productDetail.description}</p>
           </div>
-          <div className="ProductDetail__chat">Chat</div>
         </div>
       ) : (
         <div className="Chat__signIn">
