@@ -20,7 +20,7 @@ const Navi = () => {
           <Nav className="me-auto" navbar>
             <div className="Navbar__ads_add">
               <NavItem className="Navbar__addItems">
-                <NavLink href="/addItem/">Ürün Ekle</NavLink>
+                <NavLink href="/addItem">Ürün Ekle</NavLink>
               </NavItem>
             </div>
             <div className="Navbar__button">
