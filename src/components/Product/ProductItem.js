@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   Button,
   Card,
   CardBody,
   CardTitle,
-  CardSubtitle,
   CardText,
   CardImg,
 } from "reactstrap";
 import "./ProductItem.css";
 
 const ProductItem = (props) => {
-  const [readMore, setReadMore] = useState(false);
   return (
     <div>
-      <Card className="ProductItem__card" color="success" body outline>
+      <Card className="ProductItem__card" body outline>
         <CardBody className="ProductItem__cardBody">
           <CardImg
             className="ProductItem__image"
@@ -35,11 +33,6 @@ const ProductItem = (props) => {
               {props.place}
             </CardText>
           </div>
-          {/* <Button color="secondary">
-            <Link className="ProductItem__button" to={`/chat`}>
-              Mesaj Gönder
-            </Link>
-          </Button> */}
           <Button color="success">
             <Link className="ProductItem__button" to={`/${props.id}`}>
               Detay

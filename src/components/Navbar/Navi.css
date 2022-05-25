@@ -1,5 +1,5 @@
 .Navbar__page{
-    width: 1243px;
+    width: 1300px;
     margin: auto
 }
 
@@ -8,6 +8,11 @@
     width: 100px;
     padding-top: 15px;
     padding-left: 15px;
+}
+
+.Navbar__count{
+    background-color: red;
+    height: 10px;
 }
 
 .Navbar__addItems{
@@ -19,7 +24,7 @@
 
 .Navbar__ads_add{
     /* background-color: green; */
-    padding-left:165%;
+    padding-left:180%;
     float: right;
     display: flex;
     /* width: 1100px; */

@@ -1,18 +1,41 @@
 .Search__page{
     display: flex;
-    /* background-color: red; */
-    width: 1000px;
-    margin: auto;
+    width: 1210px;
+    /* margin: auto; */
+    margin-left: 25px;
     margin-top: 10px;
 }
 
-.Search__category_div{
-    /* background-color: green; */
-    margin-left: 150px;
+.Search__category_div {
+    margin-right: 15px;
+    width: 350px;
+}
+
+.Search__category_div p{
+    /* margin-left: 150px; */
     margin-right: 5px;
+    border: 1px solid #e4e4e7;
+    border-radius: 5px;
+}
+
+.Search__place_div{
+    margin-right: 15px;
+    width: 350px;
+}
+
+.Search__place_div p{
+    margin-right: 5px;
+    border: 1px solid #e4e4e7;
+    border-radius: 5px;
 }
 
 .Search__title_div{
-    /* background-color: yellow; */
-    width: 400px;
+    width: 792px;
+}
+
+.Search__title_div p{
+    width: 792px;
+    border: 1px solid #e4e4e7;
+    font-size: 14px;
+    border-radius: 5px;
 }

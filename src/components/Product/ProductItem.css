@@ -1,8 +1,10 @@
 .ProductItem__card{
     width: 386px;
     float: left;
-    margin-left: 23px;
+    margin-left: 25px;
     margin-top: 20px;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgb(164, 164, 164);
 }
 
 .ProductItem__image{

@@ -6,6 +6,7 @@ import {
   NavItem,
   NavLink,
   Nav,
+  NavbarText,
 } from "reactstrap";
 import SignIn from "../Auth/SignIn";
 import SignOut from "../Auth/SignOut";

@@ -5,9 +5,10 @@
 }
 
 .productList__search{
-    background-color: darkseagreen;
+    /* background-color: #c4e2c4; */
     width: 1243px;
     margin: auto;
     height: 60px;
     padding-top: 2px;
+    margin-bottom: 40px;
 }
