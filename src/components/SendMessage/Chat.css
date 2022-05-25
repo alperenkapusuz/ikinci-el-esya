@@ -21,14 +21,13 @@ p {
   padding: 20px 10px 0 20px;
   margin: 20px;
   border-radius: 15px;
-  /* box-shadow: 0 0 10px rgb(164, 164, 164); */
   align-items: center;
 }
 
 .sent {
-  background-color: #298f24;
+  background-color: #28a745;
+  border: 1px solid lightgray;
   color: white;
-  /* border-top-right-radius: 1000px; */
   flex-direction: row-reverse;
   padding: 20px 20px 0 10px;
   text-align: end;
@@ -38,7 +37,6 @@ p {
 .received {
   border: 1px solid lightgray;
   background-color: #fafafa;
-  /* border-top-left-radius: 1000px; */
   float: left;
 }
 
