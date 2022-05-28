@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import "./ProductDetail.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";;
+import { auth } from "../../firebase";
 
 const ProductDetail = (props) => {
   const { p_id } = useParams();
@@ -18,14 +18,14 @@ const ProductDetail = (props) => {
     }
   }, []);
  
-  console.log(productDetail)
+
   return (
     <div className="ProductDetail__page">
       {user ? (
         <div>
           <div className="ProductDetail__detail">
             <div className="ProductDetail__image">
-              <img src={productDetail.imageURL} />
+              <img src={productDetail.imageURL} alt="img"/>
             </div>
             <div>
               <div className="ProductDetail__title">

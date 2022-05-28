@@ -27,8 +27,6 @@ const App = () => {
     } 
   };
 
-  console.log(products)
-
   return (
     <BrowserRouter>
       <Navi/>

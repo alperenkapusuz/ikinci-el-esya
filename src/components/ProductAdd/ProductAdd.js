@@ -19,6 +19,7 @@ const ProductAdd = () => {
     place: "",
   });
 
+  console.log(form.imageURL)
   const saveItem = () => {
     if (
       form.title === "" ||
@@ -108,32 +109,6 @@ const ProductAdd = () => {
                 value={form.profile}
               />
             </FormGroup>
-            <FormGroup className="ProductAdd__image">
-              <Label>Image</Label>
-              <Input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Enter image URL"
-                onChange={(event) =>
-                  setForm({ ...form, imageURL: event.target.value })
-                }
-                value={form.imageURL}
-              />
-            </FormGroup>
-            <FormGroup className="ProductAdd__description">
-              <Label>Description</Label>
-              <Input
-                type="text"
-                name="description"
-                id="description"
-                placeholder="Enter description"
-                onChange={(event) =>
-                  setForm({ ...form, description: event.target.value })
-                }
-                value={form.description}
-              />
-            </FormGroup>
             <FormGroup className="ProductAdd__price">
               <Label>Price</Label>
               <Input
@@ -160,6 +135,61 @@ const ProductAdd = () => {
                 value={form.place}
               />
             </FormGroup>
+            <div className="image_div">
+            <FormGroup className="ProductAdd__image">
+              <Label>Image 1</Label>
+              <Input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Enter image URL"
+                onChange={(event) =>
+                  setForm({ ...form, imageURL: event.target.value })
+                }
+                value={form.imageURL.img1}
+              />
+            </FormGroup>
+            {/* <FormGroup className="ProductAdd__image">
+              <Label>Image 2</Label>
+              <Input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Enter image URL"
+                onChange={(event) =>
+                  setForm({ ...form, imageURL:{...form.imageURL, img2:event.target.value}})
+                }
+                value={form.imageURL.img2}
+              />
+            </FormGroup>
+            <FormGroup className="ProductAdd__image">
+              <Label>Image 3</Label>
+              <Input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Enter image URL"
+                onChange={(event) =>
+                  setForm({ ...form, imageURL: {...form.imageURL, img3:event.target.value}})
+                }
+                value={form.imageURL.img3}
+              />
+            </FormGroup> */}
+            </div>
+            <FormGroup className="ProductAdd__description">
+              <Label>Description</Label>
+              <Input
+                type="textarea"
+                name="description"
+                id="description"
+                placeholder="Enter description"
+                onChange={(event) =>
+                  setForm({ ...form, description: event.target.value })
+                }
+                value={form.description}
+                style={{ height: 220 , width: 505}}
+              />
+            </FormGroup>
             <Button
               className="ProductAdd__button"
               color="success"
@@ -179,3 +209,7 @@ const ProductAdd = () => {
 };
 
 export default ProductAdd;
+
+
+
+

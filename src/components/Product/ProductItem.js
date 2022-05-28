@@ -6,11 +6,13 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  // CardImg,
 } from "reactstrap";
 import "./ProductItem.css";
 
+
+
 const ProductItem = (props) => {
+
   return (
     <div>
       <Card className="ProductItem__card" body outline>
@@ -27,7 +29,7 @@ const ProductItem = (props) => {
             <CardText className="mb-2 text-muted" tag="h4">
               {props.price} TL
             </CardText>
-            <CardText className="mb-2 text-muted" tag="h4">
+            <CardText className="mb-2 text-muted" tag="h6">
               {props.place}
             </CardText>
           </div>
