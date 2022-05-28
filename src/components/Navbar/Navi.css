@@ -3,35 +3,29 @@
     margin: auto
 }
 
+.Navbar__count{
+    height: 10px;
+}
+
 .Navbar__ads{
-    /* background-color: red; */
     width: 100px;
     padding-top: 15px;
     padding-left: 15px;
 }
 
-.Navbar__count{
-    background-color: red;
-    height: 10px;
-}
-
 .Navbar__addItems{
-    /* background-color: blue; */
     width: 125px;
     padding-top: 15px;
     padding-left: 20px;
 }
 
 .Navbar__ads_add{
-    /* background-color: green; */
     padding-left:180%;
     float: right;
     display: flex;
-    /* width: 1100px; */
 }
 
 .Navbar__button{
-    /* background-color: yellow; */
     display: flex;
     width: 300px;
 }

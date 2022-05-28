@@ -12,14 +12,14 @@ const ProductAdd = () => {
     id: Math.random().toString(),
     title: "",
     category: "",
-    profile:"",
+    profile: "",
     imageURL: "",
     description: "",
     price: "",
     place: "",
   });
 
-  console.log(form.imageURL)
+  console.log(form.imageURL);
   const saveItem = () => {
     if (
       form.title === "" ||
@@ -136,20 +136,20 @@ const ProductAdd = () => {
               />
             </FormGroup>
             <div className="image_div">
-            <FormGroup className="ProductAdd__image">
-              <Label>Image 1</Label>
-              <Input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Enter image URL"
-                onChange={(event) =>
-                  setForm({ ...form, imageURL: event.target.value })
-                }
-                value={form.imageURL.img1}
-              />
-            </FormGroup>
-            {/* <FormGroup className="ProductAdd__image">
+              <FormGroup className="ProductAdd__image">
+                <Label>Image 1</Label>
+                <Input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Enter image URL"
+                  onChange={(event) =>
+                    setForm({ ...form, imageURL: event.target.value })
+                  }
+                  value={form.imageURL.img1}
+                />
+              </FormGroup>
+              {/* <FormGroup className="ProductAdd__image">
               <Label>Image 2</Label>
               <Input
                 type="text"
@@ -187,7 +187,7 @@ const ProductAdd = () => {
                   setForm({ ...form, description: event.target.value })
                 }
                 value={form.description}
-                style={{ height: 220 , width: 505}}
+                style={{ height: 220, width: 505 }}
               />
             </FormGroup>
             <Button
@@ -209,7 +209,3 @@ const ProductAdd = () => {
 };
 
 export default ProductAdd;
-
-
-
-

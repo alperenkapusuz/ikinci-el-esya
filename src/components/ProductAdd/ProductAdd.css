@@ -6,11 +6,9 @@
 
 .ProductAdd__title{
     display: flex;
-    /* background-color: red; */
 }
 
 .ProductAdd__title Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 300px;
     margin-top: 10px;
@@ -31,7 +29,6 @@
 }
 
 .ProductAdd__category Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 300px;
     margin-top: 10px;
@@ -72,7 +69,6 @@
 }
 
 .ProductAdd__description Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 300px;
     margin-top: 10px;
@@ -87,7 +83,6 @@
 }
 
 .ProductAdd__price Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 300px;
     margin-top: 10px;
@@ -108,7 +103,6 @@
 }
 
 .ProductAdd__place Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 300px;
     margin-top: 10px;
@@ -124,15 +118,10 @@
     margin-left: 5px;
 }
 
-.ProductAdd__image{
-    /* display: flex; */
-}
 
 .ProductAdd__image Label{
-    /* background-color: blue; */
     width: 120px;
     margin-left: 50px;
-    /* margin-top: 10px; */
     font-size: 20px;
     padding-left: 15px;
     color: #298f24
@@ -159,7 +148,6 @@
 
 .ProductAdd__signIn p{
     margin: auto;
-    /* background-color: red; */
     width: 300px;
     margin-top: 20px;
 }
