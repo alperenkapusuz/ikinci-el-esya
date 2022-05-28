@@ -6,7 +6,7 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  CardImg,
+  // CardImg,
 } from "reactstrap";
 import "./ProductItem.css";
 
@@ -15,15 +15,13 @@ const ProductItem = (props) => {
     <div>
       <Card className="ProductItem__card" body outline>
         <CardBody className="ProductItem__cardBody">
-          <CardImg
+          <img
             className="ProductItem__image"
-            height="200%"
             src={props.imageURL}
             alt="Card image cap"
           />
-
           <div className="ProductItem__div1">
-            <CardTitle tag="h5">{props.title}</CardTitle>
+            <CardTitle tag="h4">{props.title}</CardTitle>
           </div>
           <div className="ProductItem__div2">
             <CardText className="mb-2 text-muted" tag="h4">

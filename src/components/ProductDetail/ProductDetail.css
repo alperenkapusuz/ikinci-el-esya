@@ -21,6 +21,11 @@
     background-color: #F8F9FA;
     border: 1px solid #c4e2c4;
     border-radius: 5px;
+}
+
+.ProductDetail__image img{
+    object-fit: scale-down;
+    background-color: whitesmoke;
     
 }
 

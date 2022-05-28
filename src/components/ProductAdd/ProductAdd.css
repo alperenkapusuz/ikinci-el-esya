@@ -47,6 +47,26 @@
     margin-left: 5px;
 }
 
+.ProductAdd__profile{
+    display: flex;
+}
+
+.ProductAdd__profile Label{
+    width: 120px;
+    margin-left: 300px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #298f24
+}
+
+.ProductAdd__profile Input{
+    width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
 .ProductAdd__description{
     display: flex;
 }

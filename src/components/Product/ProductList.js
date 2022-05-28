@@ -46,9 +46,9 @@ const ProductList = (props) => {
               key={product.id}
               id={product.id}
               title={product.title}
-              category={product.category}
+              // category={product.category}
               imageURL={product.imageURL}
-              description={product.description}
+              // description={product.description}
               price={product.price}
               place={product.place}
             />
