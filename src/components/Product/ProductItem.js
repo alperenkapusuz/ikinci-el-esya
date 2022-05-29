@@ -19,7 +19,7 @@ const ProductItem = (props) => {
         <CardBody className="ProductItem__cardBody">
           <img
             className="ProductItem__image"
-            src={props.imageURL}
+            src={props.imageURL[0]}
             alt="Card image cap"
           />
           <div className="ProductItem__div1">

@@ -12,21 +12,19 @@
 }
 
 .ProductDetail__image{
-    float: left;
-    height: 352px;
-    width: 500px;
+    height: 400px;
+    width: 480px;
     padding-right: 40px;
-    padding-top: 12px;
-    display: inline;
-    background-color: #F8F9FA;
+    padding-top: 35px;
+    background-color: #f5faf5;
     border: 1px solid #c4e2c4;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 
 .ProductDetail__image img{
     object-fit: scale-down;
-    background-color: whitesmoke;
-    
+    background-color: #f5faf5;
+    padding-right: 45px;
 }
 
 

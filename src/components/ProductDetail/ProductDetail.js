@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, UncontrolledCarousel } from "reactstrap";
 import "./ProductDetail.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
@@ -8,7 +8,20 @@ import { auth } from "../../firebase";
 const ProductDetail = (props) => {
   const { p_id } = useParams();
   const [productDetail, setProductDetail] = useState("");
+  const [productDetailImage, setProductDetailImage] = useState([]);
   const [user] = useAuthState(auth);
+
+  const items = [
+    {
+      src: productDetailImage[0],
+    },
+    {
+      src: productDetailImage[1],
+    },
+    {
+      src: productDetailImage[2],
+    },
+  ];
 
   useEffect(() => {
     for (let i = 0; i < props.items.length; i++) {
@@ -16,16 +29,25 @@ const ProductDetail = (props) => {
         setProductDetail(props.items[i]);
       }
     }
+
+    for (let j = 0; j < props.items.length; j++) {
+      if (props.items[j].id === p_id) {
+        setProductDetailImage(props.items[j].imageURL);
+      }
+    }
   }, []);
- 
 
   return (
     <div className="ProductDetail__page">
       {user ? (
         <div>
           <div className="ProductDetail__detail">
-            <div className="ProductDetail__image">
-              <img src={productDetail.imageURL} alt="img"/>
+            <div>
+            <UncontrolledCarousel
+            indicators={false}
+            className="ProductDetail__image"
+            items={items}
+          />
             </div>
             <div>
               <div className="ProductDetail__title">
@@ -39,11 +61,15 @@ const ProductDetail = (props) => {
               <div className="ProductDetail__price">
                 <p>Price: ₺{productDetail.price} </p>
               </div>
-              <Button className="ProductDetail__button"  color="success">
-                <Link className="ProductDetail__link" to="/chat">Mesaj Gönder</Link>
+              <Button className="ProductDetail__button" color="success">
+                <Link className="ProductDetail__link" to="/chat">
+                  Mesaj Gönder
+                </Link>
               </Button>
-              <Button className="ProductDetail__button"  color="secondary">
-                <Link className="ProductDetail__link" to="/">Anasayfaya dön</Link>
+              <Button className="ProductDetail__button" color="secondary">
+                <Link className="ProductDetail__link" to="/">
+                  Anasayfaya dön
+                </Link>
               </Button>
             </div>
           </div>

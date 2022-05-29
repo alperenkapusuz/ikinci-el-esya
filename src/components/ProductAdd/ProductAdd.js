@@ -13,19 +13,18 @@ const ProductAdd = () => {
     title: "",
     category: "",
     profile: "",
-    imageURL: "",
+    imageURL: [],
     description: "",
     price: "",
     place: "",
   });
 
-  console.log(form.imageURL);
   const saveItem = () => {
     if (
       form.title === "" ||
       form.category === "" ||
       form.profile === "" ||
-      form.imageURL === "" ||
+      form.imageURL.length === 0 ||
       form.description === "" ||
       form.price === "" ||
       form.place === ""
@@ -44,7 +43,7 @@ const ProductAdd = () => {
       title: "",
       category: "",
       profile: "",
-      imageURL: "",
+      imageURL: ["","",""],
       description: "",
       price: "",
       place: "",
@@ -64,6 +63,8 @@ const ProductAdd = () => {
       setData(JSON.parse(localData));
     }
   };
+
+
 
   return (
     <div>
@@ -139,42 +140,42 @@ const ProductAdd = () => {
               <FormGroup className="ProductAdd__image">
                 <Label>Image 1</Label>
                 <Input
-                  type="text"
+                  type="textarea"
                   name="text"
                   id="text"
                   placeholder="Enter image URL"
                   onChange={(event) =>
-                    setForm({ ...form, imageURL: event.target.value })
+                    setForm({ ...form, imageURL:[event.target.value]})
                   }
-                  value={form.imageURL.img1}
+                  value={form.imageURL[0]}
                 />
               </FormGroup>
-              {/* <FormGroup className="ProductAdd__image">
+              <FormGroup className="ProductAdd__image">
               <Label>Image 2</Label>
               <Input
-                type="text"
+                type="textarea"
                 name="text"
                 id="text"
                 placeholder="Enter image URL"
                 onChange={(event) =>
-                  setForm({ ...form, imageURL:{...form.imageURL, img2:event.target.value}})
+                  setForm({ ...form, imageURL:[form.imageURL[0],event.target.value]})
                 }
-                value={form.imageURL.img2}
+                value={form.imageURL[1]}
               />
             </FormGroup>
             <FormGroup className="ProductAdd__image">
               <Label>Image 3</Label>
               <Input
-                type="text"
+                type="textarea"
                 name="text"
                 id="text"
                 placeholder="Enter image URL"
                 onChange={(event) =>
-                  setForm({ ...form, imageURL: {...form.imageURL, img3:event.target.value}})
+                  setForm({ ...form, imageURL:[form.imageURL[0],form.imageURL[1],event.target.value]})
                 }
-                value={form.imageURL.img3}
+                value={form.imageURL[2]}
               />
-            </FormGroup> */}
+            </FormGroup>
             </div>
             <FormGroup className="ProductAdd__description">
               <Label>Description</Label>
