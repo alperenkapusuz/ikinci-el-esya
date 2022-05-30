@@ -8,6 +8,9 @@ import "./ProductAdd.css";
 const ProductAdd = () => {
   const [data, setData] = useState([]);
   const [user] = useAuthState(auth);
+  const [username, setUsername] = useState("");
+  const [userGmail, setUserGmail] = useState("");
+  const [userPhoto, setUserPhoto] = useState("");
   const [form, setForm] = useState({
     id: Math.random().toString(),
     title: "",
@@ -31,8 +34,24 @@ const ProductAdd = () => {
       return;
     }
 
+    const userInfo = auth.currentUser;
+    let uname = form.username;
+    let uGmail = form.userGmail;
+    let uPhoto = form.userPhoto;
+    if (userInfo != null) {
+      uname = userInfo.displayName;
+      uGmail = userInfo.email;
+      uPhoto = userInfo.photoURL;
+    }
+    setUsername(uname);
+    setUserGmail(uGmail);
+    setUserPhoto(uPhoto);
+
     data.push({
       ...form,
+      username: uname,
+      userGmail: uGmail,
+      userPhoto: uPhoto,
     });
 
     localStorage.setItem("data", JSON.stringify(data));
@@ -45,11 +64,16 @@ const ProductAdd = () => {
       price: "",
       place: "",
     });
+    console.log(data);
   };
 
   useEffect(() => {
     getItem();
   }, []);
+
+  console.log(username);
+  console.log(userGmail);
+  console.log(userPhoto);
 
   const getItem = () => {
     const localData = localStorage.getItem("data") ?? [];
@@ -60,6 +84,8 @@ const ProductAdd = () => {
       setData(JSON.parse(localData));
     }
   };
+
+  console.log(form);
 
   return (
     <div>

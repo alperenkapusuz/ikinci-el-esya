@@ -9,9 +9,6 @@ const ProductDetail = (props) => {
   const { p_id } = useParams();
   const [productDetail, setProductDetail] = useState("");
   const [productDetailImage, setProductDetailImage] = useState([]);
-  const [username, setUsername] = useState("");
-  const [userGmail, setUserGmail] = useState("");
-  const [userPhoto, setUserPhoto] = useState("");
   const [user] = useAuthState(auth);
 
   const items = [
@@ -38,17 +35,9 @@ const ProductDetail = (props) => {
         setProductDetailImage(props.items[j].imageURL);
       }
     }
-
-    const userInfo = auth.currentUser;
-    if (userInfo != null) {
-      const displayName = userInfo.displayName;
-      const email = userInfo.email;
-      const photoURL = userInfo.photoURL;
-      setUsername(displayName);
-      setUserGmail(email);
-      setUserPhoto(photoURL);
-    }
   }, []);
+
+
   return (
     <div className="ProductDetail__page">
       {user ? (
@@ -64,11 +53,11 @@ const ProductDetail = (props) => {
             <div>
               <div className="ProductDetail__userInfo">
                 <div className="ProductDetail__userPhoto">
-                  <img src={userPhoto} alt="user photo" />
+                  <img src={productDetail.userPhoto} alt="user photo" />
                 </div>
                 <div className="ProductDetail__username-gmail">
-                  <p>{username}</p>
-                  <p>{userGmail}</p>
+                  <p>{productDetail.username}</p>
+                  <p>{productDetail.userGmail}</p>
                 </div>
                 <div>
                   <Button className="ProductDetail__chat-button" color="success">
