@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button, UncontrolledCarousel } from "reactstrap";
+import { auth } from "../../firebase";
 import "./ProductDetail.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
 
 const ProductDetail = (props) => {
   const { p_id } = useParams();
   const [productDetail, setProductDetail] = useState("");
   const [productDetailImage, setProductDetailImage] = useState([]);
+  const [username, setUsername] = useState("");
+  const [userGmail, setUserGmail] = useState("");
+  const [userPhoto, setUserPhoto] = useState("");
   const [user] = useAuthState(auth);
 
   const items = [
@@ -35,24 +38,48 @@ const ProductDetail = (props) => {
         setProductDetailImage(props.items[j].imageURL);
       }
     }
-  }, []);
 
+    const userInfo = auth.currentUser;
+    if (userInfo != null) {
+      const displayName = userInfo.displayName;
+      const email = userInfo.email;
+      const photoURL = userInfo.photoURL;
+      setUsername(displayName);
+      setUserGmail(email);
+      setUserPhoto(photoURL);
+    }
+  }, []);
   return (
     <div className="ProductDetail__page">
       {user ? (
         <div>
           <div className="ProductDetail__detail">
             <div>
-            <UncontrolledCarousel
-            indicators={false}
-            className="ProductDetail__image"
-            items={items}
-          />
+              <UncontrolledCarousel
+                indicators={false}
+                className="ProductDetail__image"
+                items={items}
+              />
             </div>
             <div>
+              <div className="ProductDetail__userInfo">
+                <div className="ProductDetail__userPhoto">
+                  <img src={userPhoto} alt="user photo" />
+                </div>
+                <div className="ProductDetail__username-gmail">
+                  <p>{username}</p>
+                  <p>{userGmail}</p>
+                </div>
+                <div>
+                  <Button className="ProductDetail__chat-button" color="success">
+                    <Link className="ProductDetail__link" to="/chat">
+                      Mesaj Gönder
+                    </Link>
+                  </Button>
+                </div>
+              </div>
               <div className="ProductDetail__title">
                 <p>{productDetail.title}</p>
-                <p>{productDetail.profile}</p>
               </div>
               <div className="ProductDetail__cp">
                 <p>{productDetail.category}</p>
@@ -61,11 +88,6 @@ const ProductDetail = (props) => {
               <div className="ProductDetail__price">
                 <p>Price: ₺{productDetail.price} </p>
               </div>
-              <Button className="ProductDetail__button" color="success">
-                <Link className="ProductDetail__link" to="/chat">
-                  Mesaj Gönder
-                </Link>
-              </Button>
               <Button className="ProductDetail__button" color="secondary">
                 <Link className="ProductDetail__link" to="/">
                   Anasayfaya dön
